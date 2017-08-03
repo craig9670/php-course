@@ -1,20 +1,113 @@
 <?php
 
+	if (isset($_POST["submit"])) {
+		$income = $_POST["income"];		
+		$rentMortgage = $_POST["rentMortgage"];
+		$homePhone = $_POST["homePhone"];
+		$cellPhone = $_POST["cellPhone"];
+		$numCellPhone = $_POST["numCellPhone"];
+		$hydro = $_POST["hydro"];
+		$tvInternet = $_POST["tvInternet"];
+		$travelExpenses = $_POST["travelExpenses"];
+		$food = $_POST["food"];
+		$totalMonthlyExpenses = $rentMortgage + $homePhone + ($cellPhone * $numCellPhone) + $hydro + $tvInternet + $travelExpenses + $food;
+		$monthlyBalance = $income - $totalMonthlyExpenses;
+		$projectedYearly = $monthlyBalance * 12;
+
+	}
+	else {
+		$income = "";
+		$rentMortgage = "";
+		$homePhone = "";
+		$cellPhone = "";
+		$numCellPhone = 1;
+		$hydro = "";
+		$tvInternet = "";
+		$travelExpenses = "";
+		$food = "";
+		$totalMonthlyExpenses = "";
+		$monthlyBalance = "";
+		$projectedYearly = "";
+	}
 ?>
 
 <div class="bodyContent">
-	<p> Calculate Monthly Balances</p>
-	<form method="GET" action="" autocomplete="off">
-		Income
-		&nbsp;
-		<input class="textboxW" id="firstName" type="text" name="income" />
-		</br>
-		Rent/Mortgage
-		&nbsp;
-		<input class="textboxW" id="firstName" type="text" name="rentmortgage" />
-		</br>
-		&nbsp;
-		<input class="abutton" id="Submit" type="submit" name="mysubmit" value="Calculate" />
-		
-	</form
+	<h1>Calculate Monthly Balances</h1>
+	<form method="POST" action="monthlyBills.php" autocomplete="off">
+		<table>
+			<tr>
+				<td></td>
+				<td></td>
+				<td><label class="typedNumber">Income</label></td>
+				<td><input class="textboxW" id="income" type="text" name="income" value="<?php echo $income; ?>"  /></td>
+			</tr>
+			<tr>
+				<td><label class="typedNumber">Rent/Mortgage</label></td>
+				<td><input class="textboxW" id="rentMortgage" type="text" name="rentMortgage" value="<?php echo $rentMortgage; ?>" /></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td><label class="typedNumber">Home Phone</label></td>
+				<td><input class="textboxW" id="homePhone" type="text" name="homePhone" value="<?php echo $homePhone; ?>"  /></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td><label class="typedNumber">Cell Phone</label></td>
+				<td><input class="textboxW" id="cellPhone" type="text" name="cellPhone" value="<?php echo $cellPhone; ?>" /></td>
+				<td><label class="typedNumber"># of Cell Phone</label></td>
+				<td><input class="textboxW" id="numCellPhone" type="text" name="numCellPhone" value="<?php echo $numCellPhone; ?>"  /></td>
+			</tr>
+			<tr>
+				<td><label class="typedNumber">Hydro</label></td>
+				<td><input class="textboxW" id="hydro" type="text" name="hydro" value="<?php echo $hydro; ?>"  /></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td><label class="typedNumber">Cable TV/Internet</label></td>
+				<td><input class="textboxW" id="tvInternet" type="text" name="tvInternet" value="<?php echo $tvInternet; ?>"  /></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td><label class="typedNumber">Travel Expenses</label></td>
+				<td><input class="textboxW" id="travelExpenses" type="text" name="travelExpenses" value="<?php echo $travelExpenses; ?>"  /></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td><label class="typedNumber">Food</label></td>
+				<td><input class="textboxW" id="food" type="text" name="food" value="<?php echo $food; ?>"  /></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td><label class="typedNumber">Total Monthly Expenses</label></td>
+				<td><input class="textboxW" id="totalMonthlyExpenses" type="text" name="totalMonthlyExpenses" value="<?php echo $totalMonthlyExpenses; ?>"  /></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td><label class="typedNumber">Monthly Balance (-/+)</label></td>
+				<td><input class="textboxW" id="monthlyBalance" type="text" name="monthlyBalance" value="<?php echo $monthlyBalance; ?>"  /></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td><label class="typedNumber">Projected Yearly</label></td>
+				<td><input class="textboxW" id="projectedYearly" type="text" name="projectedYearly" value="<?php echo $projectedYearly; ?>"  /></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td><input class="abutton" id="submit" type="submit" name="submit" value="Calculate"  /></td>
+			</tr>
+		</table>
+
+	</form>
 </div>

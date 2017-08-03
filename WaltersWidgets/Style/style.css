@@ -40,10 +40,11 @@
 	 line-height: 22px;
 	 font-family: Calibri;
 	 font-size: 16px;
-	 color: lightblue;
+	 color: black;
 	 font-weight: 700;
 	 text-align: center;
 	 padding-left: 3px;
+	 text-decoration:none;
  }
  
   .navbutton a:hover {
@@ -79,3 +80,28 @@
 	 font-size: 11px;
 	 color: black;
  }
+ 
+ table {
+	 margin-left: auto;
+	 margin-right: auto;
+	 margin: 0px auto;
+	 border-collapse: separate;
+	 border-spacing: 10px;
+ }
+ 
+ td {
+	 margin-left: 10px;
+	 text-align:right;
+ }
+ 
+ .typedNumber {
+	 font-weight: 700;
+	 font-size: 1.2em;
+ }
+ 
+
+.textboxW {
+	text-align: right;
+	display: block; 
+	font-family: Courier New;
+}
