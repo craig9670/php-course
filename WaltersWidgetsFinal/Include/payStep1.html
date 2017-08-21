@@ -1,0 +1,54 @@
+<?php
+	$firstName = $_POST["firstName"];
+	$lastName = $_POST["lastName"];
+	$hoursWorked = $_POST["hoursWorked"];
+	$wage = $_POST["wage"];
+	$grossPay = $hoursWorked * $wage;
+	$payrollTax = $grossPay * 0.25;
+	$netPay = $grossPay - $payrollTax;
+?>
+
+<form method='POST' action="" autocomplete='off'>
+	<table>
+		<tr>
+			<td><label class="typedNumber">First Name</label></td></td>
+			<td><input class="textboxW" id="firstName" type="text" name="firstName" value="<?php echo $firstName;?>" /></td>
+		</tr>
+		<tr>
+			<td><label class="typedNumber">Last Name</label></td></td>
+			<td><input class="textboxW" id="lastName" type="text" name="lastName" value="<?php echo $lastName;?>" /></td>
+		</tr>
+		<tr>
+			<td><label class="typedNumber">Hours Worked</label></td></td>
+			<td><input class="textboxW" id="hoursWorked" type="text" name="hoursWorked" value="<?php echo $hoursWorked;?>" /></td>
+		</tr>
+		<tr>
+			<td><label class="typedNumber">Wage</label></td></td>
+			<td><input class="textboxW" id="wage" type="text" name="wage" value="<?php echo number_format($wage, 2);?>" /></td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td><label class="typedNumber">Gross Pay</label></td></td>
+			<td><input class="textboxW" id="grossPay" type="text" name="grossPay" value="<?php echo number_format($grossPay, 2);?>" /></td>
+		</tr>
+		<tr>
+			<td><label class="typedNumber">Payroll Tax</label></td></td>
+			<td><input class="textboxW" id="payrollTax" type="text" name="payrollTax" value="<?php echo number_format($payrollTax, 2);?>" /></td>
+		</tr>
+		<tr>
+			<td><label class="typedNumber">Net Pay</label></td></td>
+			<td><input class="textboxW" id="netPay" type="text" name="netPay" value="<?php echo number_format($netPay, 2);?>" /></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+		</tr>
+	</table>
+</form>
