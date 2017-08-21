@@ -1,0 +1,84 @@
+body
+{
+	background-color: white;
+}
+a{
+	text-decoration:none;
+}
+/*will set the main web page position in the browser */
+.divPage
+{
+	width: 960px;
+	height:530px;	
+	margin-top:12px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom:0px;
+}
+/*will provide a banner image across the top of the web page */
+.header
+{
+	width:960px;
+	height:95px;
+	background-image: url(../Images/WidgetBanner.png); /* display image for the header*/
+	background-repeat: no-repeat /* display the image once. even if the image could fit more than once */
+}
+
+
+.navbar
+{	
+	width:960px;
+	height:25px;
+	background-image: url(../Images/walterwidgetsNavigation.png); /*image to display in the navigation section*/
+	background-repeat: repeat-x ;
+}
+
+.navbutton a
+{
+	float:left;
+	width: 100px;
+	height:25px;
+	line-height:22px;
+	font-family:calbri;
+	font-size: 16px;
+	color:black;
+	font-weight:700;
+	text-align:center;
+	padding-left:3px;
+	
+}
+
+.navbutton a:hover
+{
+	float:left;
+	width: 112px;
+	height:25px;
+	line-height:22px;
+	font-family:calibri;
+	font-size: 16px;
+	color:white;
+	font-weight: 700;
+	text-align:center;		
+	padding-left:3px;
+}
+
+.bodyContent
+{	
+	width:960px;
+	height: 525px;
+	font-family: Times New Roman;
+	font-size:16px;
+	color:black;
+	
+}
+.footer
+{
+width:960px;
+	height:25px;
+	background-image: url(../Images/walterwidgetsfooter.png); /*image to display in the navigation section*/
+	background-repeat: repeat-x;  /*The background image */
+	color:lightblue;
+	font-weight:900;	
+	text-align:center;
+	text-transform:uppercase;	
+}

@@ -1,0 +1,50 @@
+Start
+	Create variables - accept input
+	
+		name1
+		main1
+		desert1
+		beverage1
+		subtotal1
+		tax1
+		tip1
+		total1
+		
+		name2
+		main2
+		desert2
+		beverage2
+		subtotal2
+		tax2
+		tip2
+		total2
+		
+		taxPercentage
+		tipPercentage
+		
+		
+		bothPayOwnBill
+		onePayAllBills
+		splitBillEvenly
+		
+		
+	Perform calculations
+		subtotal1 = (main1 + desert1 + beverage1)
+		subtotal2 = (main2 + desert2 + beverage2)
+		tax1 = subtotal1 * (taxPercentage + 1)
+		tax2 = subtotal2 * taxPercentage + 1)
+		tip1 = subtotal1 * tipPercentage
+		tip2 = subtotal2 * tipPercentage
+		total1 = subtotal1 + tax1 + tip1
+		total2 = subtotal2 + tax2 + tip2		
+		onePayAllBills = total1 + total2
+		splitBillEvenly = (total1 + total2) / 2
+		
+	Display output
+		Display all:
+			total1 AND total2
+			onePayAllBills
+			splitBillEvenly
+		
+End
+		
