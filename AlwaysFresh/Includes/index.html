@@ -1,0 +1,57 @@
+<?php
+
+	$name1 = "";
+	$main1 = ""; 
+	$desert1 = "";
+	$beverage1 = "";
+
+	
+	$name2 = "";
+	$main2 = "";
+	$desert2 = "";
+	$beverage2 = "";
+	$subtotal2 = "";
+	
+?>
+
+<form method='POST' action="Receipt.php" autocomplete='off'>
+	<table>
+		<tr>
+			<td><label class="typedNumber">First Person's Name</label></td></td>
+			<td><input class="textboxW" id="name1" type="text" name="name1" /></td>
+			<td><label class="typedNumber">Second Person's Name</label></td></td>
+			<td><input class="textboxW" id="name2" type="text" name="name2" /></td>
+		</tr>
+		<tr>
+			<td><label class="typedNumber">Main Dish Price</label></td></td>
+			<td><input class="textboxW" id="main1" type="text" name="main1" /></td>
+			<td><label class="typedNumber">Main Dish Price</label></td></td>
+			<td><input class="textboxW" id="main2" type="text" name="main2" /></td>
+		</tr>
+		<tr>
+			<td><label class="typedNumber">Desert Price</label></td></td>
+			<td><input class="textboxW" id="desert1" type="text" name="desert1" /></td>
+			<td><label class="typedNumber">Desert Price</label></td></td>
+			<td><input class="textboxW" id="desert2" type="text" name="desert2" /></td>
+		</tr>
+		<tr>
+			<td><label class="typedNumber">Beverage Price</label></td></td>
+			<td><input class="textboxW" id="beverage1" type="text" name="beverage1" /></td>
+			<td><label class="typedNumber">Beverage Price</label></td></td>
+			<td><input class="textboxW" id="beverage2" type="text" name="beverage2" /></td>
+		</tr>		
+		<tr>
+			<td>&nbsp;</td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>		
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td><input class="abutton" id="submit" type="submit" name="submit" value="Calculate"  /></td>
+		</tr>
+	</table>
+
+</form>
